@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NickEventDemo", "NickEventD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NickEventDemo.Iteration1", "NickEventDemo.Iteration1\NickEventDemo.Iteration1.csproj", "{7C7A0D7B-1217-4D24-82C0-9F14B71FE4E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NickEventDemo.Iteration2", "NickEventDemo.Iteration2\NickEventDemo.Iteration2.csproj", "{90937CA7-BCA9-462F-B070-4B2F7D056B4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7C7A0D7B-1217-4D24-82C0-9F14B71FE4E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C7A0D7B-1217-4D24-82C0-9F14B71FE4E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C7A0D7B-1217-4D24-82C0-9F14B71FE4E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90937CA7-BCA9-462F-B070-4B2F7D056B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90937CA7-BCA9-462F-B070-4B2F7D056B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90937CA7-BCA9-462F-B070-4B2F7D056B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90937CA7-BCA9-462F-B070-4B2F7D056B4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
