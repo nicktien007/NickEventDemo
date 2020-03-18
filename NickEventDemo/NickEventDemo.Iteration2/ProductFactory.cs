@@ -13,9 +13,13 @@ namespace NickEventDemo.Iteration2
     {
         public string FactoryName { get; set; } = "1號工廠";
 
-        public delegate void CreatedEventHandler(object sender, CreatedEventArgs e);   //聲明委託
-        public event CreatedEventHandler Created;                                      //聲明事件
+        //非泛型，需定義 delegate
+        //public delegate void CreatedEventHandler(object sender, CreatedEventArgs e);   //聲明委託
+        //public event CreatedEventHandler Created;                                      //聲明事件
 
+        //泛型 EventHandler
+        public event EventHandler<CreatedEventArgs> Created;
+        
         // 定義CreatedEventArgs類，傳遞給Observer所感興趣的信息
         public class CreatedEventArgs : EventArgs
         {
