@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{10900838-5910-4A88-AC20-09E488BCCA3B}</ProjectGuid>
+    <ProjectGuid>{ACBE1563-6640-4C54-9B49-4D608797F3E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>NickEventDemo</RootNamespace>
     <AssemblyName>NickEventDemo</AssemblyName>
@@ -43,11 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Display.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="ProductFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
