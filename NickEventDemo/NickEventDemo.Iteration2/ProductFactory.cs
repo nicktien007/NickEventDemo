@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace NickEventDemo.Iteration2
@@ -15,11 +16,11 @@ namespace NickEventDemo.Iteration2
 
         //非泛型，需定義 delegate
         //public delegate void CreatedEventHandler(object sender, CreatedEventArgs e);   //聲明委託
-        //public event CreatedEventHandler Created;                                      //聲明事件
+        //public event CreatedEventHandler Created;                                    //聲明事件
 
         //泛型 EventHandler
         public event EventHandler<CreatedEventArgs> Created;
-        
+
         // 定義CreatedEventArgs類，傳遞給Observer所感興趣的信息
         public class CreatedEventArgs : EventArgs
         {
@@ -38,15 +39,18 @@ namespace NickEventDemo.Iteration2
             var pd = new Product(pdName);
 
             //通知相關單位產品生產完成
-
             OnCreated(new CreatedEventArgs(pdName));
 
-            Console.WriteLine();
+            //Console.WriteLine();
         }
 
         protected void OnCreated(CreatedEventArgs e)
         {
-            Created?.Invoke(this, e);
+            ThreadPool.QueueUserWorkItem(s =>
+            {
+                Created?.Invoke(this, e);
+            });
+            //Created?.Invoke(this, e);
         }
     }
 }
